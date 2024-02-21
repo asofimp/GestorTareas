@@ -75,14 +75,17 @@ Route::prefix('seccion')->group(function(){
 
 
  //ruta del controlador creado UserController
-Route::get('/nombre/{name}', [UserController::class, 'showName']);
-//ruta de controlador creado en UserController
-Route::get('/inicio', [UserController::class, 'index']);
+//Route::get('/nombre/{name}', [UserController::class, 'showName']);
+//ruta de controlador creado en UserController           en esta parte estamos enviando un valor por parametro
+/*Route::get('/inicio', [UserController::class, 'index'])->middleware('checkage:80');*/
 
 Route::get('/operacion/{num?}', [UserController::class, 'suma']);
 
 //ruta prueba
-Route::namespace('Administrator')->group(function(){
+//el middleware la tarea que realiza es la autenticacion de este antes de abrir cualquiera de las rutas
+Route::namespace('Administrator')->middleware('groupMiddleware')->group(function(){
     Route::get('/administrator',[AdministratorController::class, 'index']);
     Route::get('/dashdoardAdmin',[DashboardController::class, 'index']);
 });
+
+Route::view('/react','Prueba');
