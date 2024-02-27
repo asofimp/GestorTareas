@@ -88,4 +88,4 @@ Route::namespace('Administrator')->middleware('groupMiddleware')->group(function
     Route::get('/dashdoardAdmin',[DashboardController::class, 'index']);
 });
 
-Route::view('/react','Prueba');
+Route::view('/react','example');
