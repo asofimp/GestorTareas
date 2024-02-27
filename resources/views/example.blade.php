@@ -11,5 +11,6 @@
 <body>
     <div id="prueba">
     </div>
+    @yield('content')
 </body>
 </html>
