@@ -1,8 +1,8 @@
 import React from 'react'
-import Navbar from './Components/Navbar'
+import Navbar from '../Desktop/Navbar'
 import { createRoot } from 'react-dom/client';
-import List from './Components/List';
-import Widget from './Components/Widget';
+import List from '../Desktop/List';
+import Widget from '../Desktop/Widget';
 
 const Desktop = () => {
   return (
@@ -17,6 +17,7 @@ const Desktop = () => {
             <List/>
           </div>
         </div>
+
     </div>
   )
 }
