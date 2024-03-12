@@ -9,11 +9,11 @@ const Desktop = () => {
     <div>
         <Navbar/>
 
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-evenly">
           <div className="">
             <Widget/>
           </div>
-          <div className="">
+          <div className="w-25">
             <List/>
           </div>
         </div>
